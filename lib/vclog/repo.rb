@@ -178,7 +178,7 @@ module VCLog
       # gather changes for each delta
       delta.each do |tag, (started, ended)|
         if started
-          set = changes.select{ |c| c.date >= started && c.date < ended  }
+          set = changes.select{ |c| c.date > started && c.date <= ended  }
           #gt_vers, gt_date = gt.name, gt.date
           #lt_vers, lt_date = lt.name, lt.date
           #gt_date = Time.parse(gt_date) unless Time===gt_date
@@ -188,7 +188,7 @@ module VCLog
           #lt_vers, lt_date = lt.name, lt.date
           #lt_date = Time.parse(lt_date) unless Time===lt_date
           #log = changelog.before(lt_date)
-          set = changes.select{ |c| c.date < ended }
+          set = changes.select{ |c| c.date <= ended }
         end
         rel << Release.new(tag, set)
       end
@@ -196,7 +196,7 @@ module VCLog
     end
 
     #
-    # Print a report with given options. 
+    # Print a report with given options.
     #
     def report(options)
       report = Report.new(self, options)
