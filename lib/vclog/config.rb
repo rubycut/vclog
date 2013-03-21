@@ -112,7 +112,7 @@ module VCLog
     # The vclog config file.
     #
     def file
-      DEFAULT_GLOBS.find{ |g| Dir.glob(g).first }
+      #DEFAULT_GLOBS.find{ |g| Dir.glob(g).first }
     end
 
     #
@@ -131,7 +131,7 @@ module VCLog
       Dir.ascend(Dir.pwd) do |path|
         check = Dir[ROOT_GLOB].first
         if check
-          root = path 
+          root = path
           break
         end
       end
