@@ -112,7 +112,7 @@ module VCLog
     # The vclog config file.
     #
     def file
-      DEFAULT_GLOBS.find{ |g| Dir.glob(g).first }
+      FILE_GLOBS.find{ |g| Dir.glob(g).first }
     end
 
     #
