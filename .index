@@ -62,7 +62,7 @@ paths:
 created: '2006-05-09'
 summary: Cross-VCS/SCM ChangeLog Generator
 title: VCLog
-version: 1.9.4
+version: 1.9.5
 name: rubycut-vclog
 description: VCLog is a cross-VCS/SCM ChangeLog generator.
 date: '2013-03-22'
